@@ -1,0 +1,5 @@
+1.增加了对excel文件的支持，可以同时生成word 和excel文件
+
+2.运行方式DocMain.java  ExcelMain.java
+
+3.生成excel文件的模板需要特别注意：xls模板中行数必须足够大，eg.ss:ExpandedRowCount="24000",否则生成的文件打开不了

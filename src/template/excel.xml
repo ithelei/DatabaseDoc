@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+	xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel"
+	xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+		<Created>2006-09-13T11:21:51Z</Created>
+		<LastSaved>2015-11-18T14:28:27Z</LastSaved>
+		<Version>12.00</Version>
+	</DocumentProperties>
+	<OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+		<RemovePersonalInformation />
+	</OfficeDocumentSettings>
+	<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+		<WindowHeight>11640</WindowHeight>
+		<WindowWidth>19200</WindowWidth>
+		<WindowTopX>0</WindowTopX>
+		<WindowTopY>90</WindowTopY>
+		<ProtectStructure>False</ProtectStructure>
+		<ProtectWindows>False</ProtectWindows>
+	</ExcelWorkbook>
+	<Styles>
+		<Style ss:ID="Default" ss:Name="Normal">
+			<Alignment ss:Vertical="Center" />
+			<Borders />
+			<Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000" />
+			<Interior />
+			<NumberFormat />
+			<Protection />
+		</Style>
+		<Style ss:ID="s63">
+			<Alignment ss:Horizontal="Justify" ss:Vertical="Center" />
+			<Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10.5"
+				ss:Color="#000000" />
+		</Style>
+		<Style ss:ID="s65">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Bottom" />
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Left" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Right" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Top" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+			</Borders>
+			<Font ss:FontName="宋体" x:CharSet="134" ss:Size="9" ss:Color="#000000"
+				ss:Bold="1" />
+			<Interior ss:Color="#D9D9D9" ss:Pattern="Solid" />
+		</Style>
+		<Style ss:ID="s67">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Bottom" />
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Right" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Top" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+			</Borders>
+			<Font ss:FontName="宋体" x:CharSet="134" ss:Size="9" ss:Color="#000000"
+				ss:Bold="1" />
+			<Interior ss:Color="#D9D9D9" ss:Pattern="Solid" />
+		</Style>
+		<Style ss:ID="s69">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Bottom" />
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Left" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Right" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+			</Borders>
+			<Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10.5"
+				ss:Color="#000000" />
+		</Style>
+		<Style ss:ID="s71">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Bottom" />
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Right" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+			</Borders>
+			<Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10.5"
+				ss:Color="#000000" />
+		</Style>
+		<Style ss:ID="s72">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Bottom" />
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Right" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+			</Borders>
+			<Font ss:FontName="宋体" x:CharSet="134" ss:Size="9" ss:Color="#000000" />
+		</Style>
+		<Style ss:ID="s73">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Bottom" />
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+				<Border ss:Position="Right" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+			</Borders>
+			<Font ss:FontName="宋体" x:CharSet="134" ss:Size="10.5" ss:Color="#000000" />
+		</Style>
+		<Style ss:ID="s77">
+			<Alignment ss:Horizontal="Justify" ss:Vertical="Center" />
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous"
+					ss:Weight="2" />
+			</Borders>
+			<Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="10.5"
+				ss:Color="#000000" />
+		</Style>
+	</Styles>
+	<Worksheet ss:Name="Sheet1">
+	    <!-- 特别提醒 -->
+		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="24000"
+			x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54"
+			ss:DefaultRowHeight="13.5">
+			
+			<#list tableList as item>
+			
+			<Row ss:Height="14.25">
+				<Cell ss:MergeAcross="6" ss:StyleID="s77">
+					<ss:Data ss:Type="String" xmlns="http://www.w3.org/TR/REC-html40">
+						<Font html:Color="#000000">${(item.index)!""}.${(item.remarks)!item.name} 表${(item.name)!""}</Font>
+						<Font html:Face="Times New Roman" x:Family="Roman" html:Size="7"
+							html:Color="#000000">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+						</Font>
+						<Font html:Color="#000000">
+						</Font>
+						<Font html:Face="宋体" x:CharSet="134" html:Color="#000000"></Font>
+						<Font html:Color="#000000"></Font>
+					</ss:Data>
+				</Cell>
+			</Row>
+			<Row ss:Height="14.25">
+				<Cell ss:StyleID="s65">
+					<Data ss:Type="String">序号</Data>
+				</Cell>
+				<Cell ss:StyleID="s67">
+					<Data ss:Type="String">字段名</Data>
+				</Cell>
+				<Cell ss:StyleID="s67">
+					<Data ss:Type="String">字段意义</Data>
+				</Cell>
+				<Cell ss:StyleID="s67">
+					<Data ss:Type="String">字段类型</Data>
+				</Cell>
+				<Cell ss:StyleID="s67">
+					<Data ss:Type="String">是否主键</Data>
+				</Cell>
+				<Cell ss:StyleID="s67">
+					<Data ss:Type="String">允许为空</Data>
+				</Cell>
+				<Cell ss:StyleID="s67">
+					<Data ss:Type="String">备注</Data>
+				</Cell>
+			</Row>
+			
+			<#list item.columns as column>
+			
+			<Row ss:Height="15">
+				<Cell ss:StyleID="s69">
+					<Data ss:Type="Number">${column_index+1}</Data>
+				</Cell>
+				<Cell ss:StyleID="s71">
+					<Data ss:Type="String">${column._sqlName}</Data>
+				</Cell>
+				<Cell ss:StyleID="s72">
+				    <Data ss:Type="String">${(column._remarks)!""}</Data>
+				</Cell>
+				<Cell ss:StyleID="s71">
+					<Data ss:Type="String">${(column._sqlTypeOuter)!""}</Data>
+				</Cell>
+				<Cell ss:StyleID="s73">
+					<Data ss:Type="String"><#if column._isPk >是</#if></Data>
+				</Cell>
+				<Cell ss:StyleID="s73">
+					<Data ss:Type="String"><#if column._isNullable >是</#if><#if !column._isNullable >否</#if></Data>
+				</Cell>
+				<Cell ss:StyleID="s72" />
+			</Row>
+            </#list>
+		   
+		   
+		   
+			<Row ss:Height="14.25">
+				<Cell ss:StyleID="s63" />
+			</Row>
+         
+         
+         </#list>
+         <!-- end -->
+
+		</Table>
+		<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+			<PageSetup>
+				<Header x:Margin="0.3" />
+				<Footer x:Margin="0.3" />
+				<PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7"
+					x:Top="0.75" />
+			</PageSetup>
+			<Print>
+				<ValidPrinterInfo />
+				<PaperSizeIndex>9</PaperSizeIndex>
+				<HorizontalResolution>200</HorizontalResolution>
+				<VerticalResolution>200</VerticalResolution>
+			</Print>
+			<Selected />
+			<Panes>
+				<Pane>
+					<Number>3</Number>
+					<ActiveRow>12</ActiveRow>
+					<ActiveCol>7</ActiveCol>
+				</Pane>
+			</Panes>
+			<ProtectObjects>False</ProtectObjects>
+			<ProtectScenarios>False</ProtectScenarios>
+		</WorksheetOptions>
+	</Worksheet>
+	<Worksheet ss:Name="Sheet2">
+		<Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1"
+			x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54"
+			ss:DefaultRowHeight="13.5">
+		</Table>
+		<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+			<PageSetup>
+				<Header x:Margin="0.3" />
+				<Footer x:Margin="0.3" />
+				<PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7"
+					x:Top="0.75" />
+			</PageSetup>
+			<Print>
+				<ValidPrinterInfo />
+				<PaperSizeIndex>9</PaperSizeIndex>
+				<HorizontalResolution>200</HorizontalResolution>
+				<VerticalResolution>200</VerticalResolution>
+			</Print>
+			<ProtectObjects>False</ProtectObjects>
+			<ProtectScenarios>False</ProtectScenarios>
+		</WorksheetOptions>
+	</Worksheet>
+	<Worksheet ss:Name="Sheet3">
+		<Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1"
+			x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54"
+			ss:DefaultRowHeight="13.5">
+		</Table>
+		<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+			<PageSetup>
+				<Header x:Margin="0.3" />
+				<Footer x:Margin="0.3" />
+				<PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7"
+					x:Top="0.75" />
+			</PageSetup>
+			<Print>
+				<ValidPrinterInfo />
+				<PaperSizeIndex>9</PaperSizeIndex>
+				<HorizontalResolution>200</HorizontalResolution>
+				<VerticalResolution>200</VerticalResolution>
+			</Print>
+			<ProtectObjects>False</ProtectObjects>
+			<ProtectScenarios>False</ProtectScenarios>
+		</WorksheetOptions>
+	</Worksheet>
+</Workbook>

@@ -1,0 +1,95 @@
+package com.dbdoc;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.dbdoc.db.model.BusinessType;
+import com.dbdoc.db.model.Column;
+import com.dbdoc.db.model.Manualfacture;
+import com.dbdoc.db.model.Table;
+import com.dbdoc.utils.FreemarkerUtils;
+
+
+/**
+ * 
+ * 北京现场，根据txt文件生成解析说明文档
+ * 
+ * @author kevin zhang
+ *
+ */
+public class LteDocBeijing {
+	public static final String TEMPLEATE_DEFAUTL = "template/lte.xml";
+
+	public static final String OUTER_default = "d:/lte.doc";
+
+	public static void main(String[] args) throws Exception {
+
+		int mark = 0;
+
+		String path = "H:/lte/doc/LTE解析结果20140522";
+		File root = new File(path);
+		
+
+		List<Manualfacture> manu_list = new ArrayList<Manualfacture>();
+
+		for (File f1 : root.listFiles()) {
+			// System.out.println(f1.getName());
+			Manualfacture manu = new Manualfacture();
+			manu.setName(f1.getName());
+			manu_list.add(manu);
+
+			for (File f2 : f1.listFiles()) {
+				// System.out.println(f1.getName() + "" + f2.getName());
+				BusinessType business = new BusinessType();
+				business.setName(f2.getName());
+				manu.getBusiness().add(business);
+
+				for (File f3 : FileUtils.getListFiles(f2.getAbsolutePath(), "", true)) {
+					System.out.println(f1.getName() + " " + f2.getName() + "  " + f3.getName());
+					String tableName = f3.getName().substring(0, f3.getName().indexOf("."));
+
+					Table table = new Table();
+					business.getTableList().add(table);
+
+					table.setTxt(f3.getName());
+					table.setName(tableName);
+					table.setDesc(tableName);
+					// table.setDesc(f1.getName() + " " + f2.getName() + " " + talbeName);
+					if (f3.getName().endsWith(".txt")) {
+						BufferedReader br = new BufferedReader(new FileReader(f3));
+						String line = br.readLine();
+						if (line != null) {
+							String arr[] = line.split("\t");
+							for (String s : arr) {
+								Column column = new Column();
+								column.set_sqlName(s);
+
+								// if (mark == 0) {
+								table.getColumns().add(column);
+								// }
+
+							}
+						}
+						br.close();
+					}
+
+					mark++;
+				}
+			}
+		}
+
+		Map propMap = new HashMap();
+		try {
+			System.out.println(manu_list.size());
+			propMap.put("manu_list", manu_list);
+			FreemarkerUtils.writeTemplateToFile(LteDocBeijing.TEMPLEATE_DEFAUTL, propMap, LteDocBeijing.OUTER_default);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

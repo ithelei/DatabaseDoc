@@ -1,0 +1,28 @@
+package com.dbdoc.db.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Manualfacture {
+
+	private String name;
+
+	private List<BusinessType> business = new ArrayList<BusinessType>();
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<BusinessType> getBusiness() {
+		return business;
+	}
+
+	public void setBusiness(List<BusinessType> business) {
+		this.business = business;
+	}
+
+}
